@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人网站</title>
+    <!-- 使用Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- 使用Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-brand">我的博客</div>
+        <div class="nav-links">
+            <a href="#" class="active"><i class="fas fa-home"></i> 首页</a>
+            <a href="#"><i class="fas fa-th"></i> 分类</a>
+            <a href="#"><i class="fas fa-archive"></i> 归档</a>
+            <a href="#"><i class="fas fa-user"></i> 关于我</a>
+        </div>
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </nav>
+
+    <!-- 主要内容区 -->
+    <main class="container">
+        <div class="content">
+            <!-- 搜索框 -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="搜索文章..." class="search-input">
+            </div>
+
+            <!-- 文章列表 -->
+            <section class="articles" id="articlesList">
+                <!-- 文章将通过 JavaScript 动态加载 -->
+            </section>
+
+            <!-- 加载更多指示器 -->
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner fa-spin"></i> 加载中...
+            </div>
+        </div>
+
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <div class="widget about-me">
+                <h3>关于我</h3>
+                <div class="avatar">
+                    <img src="https://via.placeholder.com/150" alt="头像">
+                </div>
+                <p>这里是关于我的简短介绍...</p>
+            </div>
+
+            <div class="widget recent-posts">
+                <h3>最近文章</h3>
+                <ul id="recentPosts">
+                    <!-- 将通过 JavaScript 动态加载 -->
+                </ul>
+            </div>
+
+            <div class="widget categories">
+                <h3>分类</h3>
+                <ul>
+                    <li><a href="#">技术 (10)</a></li>
+                    <li><a href="#">生活 (5)</a></li>
+                    <li><a href="#">随笔 (3)</a></li>
+                </ul>
+            </div>
+
+            <div class="widget tags">
+                <h3>标签云</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">JavaScript</a>
+                    <a href="#" class="tag">CSS</a>
+                    <a href="#" class="tag">HTML</a>
+                    <!-- 更多标签 -->
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 我的个人网站. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-weibo"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
